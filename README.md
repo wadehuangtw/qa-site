@@ -48,6 +48,11 @@ git clone git@github.com:pi-tw/jobar.git jobar
     # 如果發生錯誤，可嘗試清除緩存如 
     docker-compose build --no-cache [你要啟動的容器]
     ````
+   
+    連接 local 資料庫與 redis
+    ````shell
+    sh database-connect.sh
+    ````
 
    讓 crontab 自動部署可以避免抓不到 composer
     ```shell
