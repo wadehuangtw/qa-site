@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// 查詢問題
+Route::get('q/{categories}', [QuestionController::class, 'show'])
+    ->where('categories', '[\p{N}\p{L}\p{M}\p{P}\p{S}\s]+');
